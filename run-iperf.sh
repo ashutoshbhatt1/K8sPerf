@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+export KUBECONFIG=$HOSTNAME.TDG.kubeconfig
 set -eu
 
 cd $(dirname $0)

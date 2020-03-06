@@ -30,7 +30,7 @@ spec:
           effect: NoSchedule
       containers:
       - name: iperf-server
-        image: gokulpch/iperf3-netperf:v1.0
+        image: docker-qa.mobiledgex.net/testmonitor/images/iperf3:v1
         args: ['-s']
         ports:
         - containerPort: 5201
@@ -74,7 +74,7 @@ spec:
           effect: NoSchedule
       containers:
       - name: iperf-client
-        image: gokulpch/iperf3-netperf:v1.0
+        image: docker-qa.mobiledgex.net/testmonitor/images/iperf3:v1
         command: ['/bin/sh', '-c', 'sleep infinity']
         # To manually run perf tests: kubectl exec iperf3-clients-jlfxq -- /bin/sh -c 'iperf3 -c iperf3-server'
       terminationGracePeriodSeconds: 0
