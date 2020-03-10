@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+for i in *.TDG.kubeconfig; do mv $i `echo $i | tr [:upper:] [:lower:]`; done
 export KUBECONFIG=$HOSTNAME.TDG.kubeconfig
 set -eu
 
